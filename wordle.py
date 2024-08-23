@@ -16,7 +16,7 @@ def makeAGuess(guess):
 
     # TASK E: Check if the current letter of guess matches the current letter of word. If so add the letter "G" to the hint
     
-    if guess[i] = word[i]:
+    if guess[i] == word[i]:
       hint += "G"
     
     # TASK F: If the previous condition is false, check if the current letter of guess is in word at all. If so add the letter "Y" to the hint
@@ -38,14 +38,26 @@ print("Let's play wordle! /n Guess the Wordle in 6 tries. Each guess must be a v
 
 # TASK I: Build a loop that loops 6 times (representing the number of guesses a user has)
 
+for i in range (6):
 
   # TASK J: Define a variable 'guess'. prompt the user for their 5-letter guess and store it in the variable
 
+  guess = input("Enter guess here.")
+
   # TASK K: Define a variable 'hint' and set the return of makeAGuess(guess) to that variable
+
+  hint = makeAGuess(guess)
 
   # TASK L: Print hint
 
+  print(hint)
+
   # TASK M: Check if hint = "GGGGG". If so the user has won. Print a win message and break the loop
-  
+
+  if hint == "GGGGG":
+    print("Correct!")
+    break  
 
 # TASK N: After the loop has finished, meaning the user has run out of guesses, check if hint != "GGGGG". If so, the user has lost. Print a lose message. 
+if hint != "GGGGG":
+  print("You are out of guesses. The word was " + word)
