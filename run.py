@@ -3,8 +3,8 @@ print("You do not remember how you got here.")
 print("There are no signs. ")
 answerA = input("Where will you go now? (forward/back/left/right)")
 
-if answerA == "":
-    print("You start walking forward. Through the trees, you can just barely see the sun start to set.")
+if answerA == "forward":
+    print("You start walking forward.")
 
 elif answerA == "back":
     answerb = input("Are you sure?")
